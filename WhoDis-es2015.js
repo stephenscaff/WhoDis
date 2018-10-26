@@ -41,7 +41,7 @@ var WhoDis = (function() {
     anyMS: function() {
       return (
         WhoDis.IE10() ||
-        WhoDis.IE() ||
+        WhoDis.IE()   ||
         WhoDis.Edge()
       );
     },
@@ -51,10 +51,10 @@ var WhoDis = (function() {
      */
     anyMobile: function() {
       return (
-        WhoDis.Android() ||
+        WhoDis.Android()    ||
         WhoDis.BlackBerry() ||
-        WhoDis.iOS() ||
-        WhoDis.OperaMini() ||
+        WhoDis.iOS()        ||
+        WhoDis.OperaMini()  ||
         WhoDis.IEMobile()
       );
     }

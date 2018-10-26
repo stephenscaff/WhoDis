@@ -30,7 +30,7 @@ const WhoDis = (() => {
     IE() {
       return ua.match(/Trident/i)
     },
-    IE10(){
+    IE10() {
       return ua.match(/MSIE/i)
     },
 
@@ -40,7 +40,7 @@ const WhoDis = (() => {
     anyMS() {
       return (
         WhoDis.IE10() ||
-        WhoDis.IE() ||
+        WhoDis.IE()   ||
         WhoDis.Edge()
       );
     },
@@ -50,10 +50,10 @@ const WhoDis = (() => {
      */
     anyMobile() {
       return (
-        WhoDis.Android() ||
+        WhoDis.Android()    ||
         WhoDis.BlackBerry() ||
-        WhoDis.iOS() ||
-        WhoDis.OperaMini() ||
+        WhoDis.iOS()        ||
+        WhoDis.OperaMini()  ||
         WhoDis.IEMobile()
       );
     }
