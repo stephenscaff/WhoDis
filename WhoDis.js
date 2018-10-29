@@ -21,7 +21,7 @@ const WhoDis = (() => {
     Opera() {
       return ua.match(/Opera Mini/i);
     },
-    Windows() {
+    IEMobile() {
       return ua.match(/IEMobile/i);
     },
     Edge() {

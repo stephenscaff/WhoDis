@@ -6,18 +6,18 @@ Mostly focuses on IE and Mobile currently, but can/will add more as needed.
 Currently, you can check for
 
 ### Mobile
-- Android
-- BlackBerry
-- iOS
-- Opera Mini
-- IE Mobile
-- Any Mobile (checks all the above)
+- Android : `Android()`
+- BlackBerry : `BlackBerry()`
+- iOS : `iOS()`
+- Opera Mini : `OperaMini()`
+- IE Mobile : `IEMobile()`
+- Any Mobile (checks all the above) : `anyMobile()`
 
 ### IEs
-- Edge
-- IE
-- IE10
-- anyMS (IEs and Edge)
+- Edge : `Edge()`
+- IE : `IE()`
+- IE10 : `IE10()`
+- anyMS (IEs and Edge) : `anyMS()`
 
 
 ## Usage
@@ -29,7 +29,7 @@ Include in your project, and the rock you checks like :
  * Bind Touch Start On mobile.
  */
 if ( WhoDis.anyMobile() ) {
-  document.addEventListener("touchstart", function(){ console.log('touching') }, true);
+  document.addEventListener("touchstart", function(){}, true);
 }
 
 /**

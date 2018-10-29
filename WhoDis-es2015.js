@@ -1,9 +1,9 @@
 /**
- * WhoDis.js
- * A simple little sniffer using UserAgent,
- * for conditional checks. Mostly for mobile and IE checks.
- * es2015 version
- */
+* WhoDis.js
+* A simple little sniffer using UserAgent,
+* for conditional checks. Mostly for mobile and IE checks.
+* es2015 version
+*/
 var WhoDis = (function() {
 
   var ua = navigator.userAgent;
