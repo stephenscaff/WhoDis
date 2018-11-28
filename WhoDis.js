@@ -1,7 +1,11 @@
 /**
  * WhoDis.js
  * A simple little sniffer. Mostly Using UA (Yikes! 😜)
- * for conditional checks. Mostly for mobile and IE checks.
+ * for conditional checks.
+ * ES6 version
+ *
+ * @return {boolean}
+ * @author stephen scaff
  */
 const WhoDis = (() => {
 
