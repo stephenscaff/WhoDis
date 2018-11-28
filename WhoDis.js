@@ -1,6 +1,6 @@
 /**
  * WhoDis.js
- * A simple little sniffer using UserAgent,
+ * A simple little sniffer. Mostly Using UA (Yikes! 😜)
  * for conditional checks. Mostly for mobile and IE checks.
  */
 const WhoDis = (() => {
@@ -15,23 +15,38 @@ const WhoDis = (() => {
     BlackBerry() {
       return ua.match(/BlackBerry/i);
     },
+    Chrome() {
+      return ua.match(/Chrome/i)
+    },
+    Edge() {
+      return ua.match(/Edge/i)
+    },
+    Firefox() {
+      return ua.match(/Firefox/i)
+    },
+    IE() {
+      return ua.match(/Trident/i)
+    },
+    IEMobile() {
+      return ua.match(/IEMobile/i);
+    },
+    IE10() {
+      return ua.match(/MSIE/i)
+    },
     iOS() {
       return ua.match(/iPhone|iPad|iPod/i);
     },
     Opera() {
       return ua.match(/Opera Mini/i);
     },
-    IEMobile() {
-      return ua.match(/IEMobile/i);
+    OperaMini() {
+      return ua.match(/Opera Mini/i)
     },
-    Edge() {
-      return ua.match(/Edge/i)
+    Safari() {
+      return !!ua.match(/Version\/[\d\.]+.*Safari/)
     },
-    IE() {
-      return ua.match(/Trident/i)
-    },
-    IE10() {
-      return ua.match(/MSIE/i)
+    Touch() {
+      return ('ontouchstart' in window) || window.DocumentTouch && document instanceof DocumentTouch
     },
 
     /**

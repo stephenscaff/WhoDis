@@ -19,6 +19,11 @@ Currently, you can check for
 - IE10 : `IE10()`
 - anyMS (IEs and Edge) : `anyMS()`
 
+### Other Browsers
+- Chrome
+- Safari
+- Firefox
+-
 
 ## Usage
 
@@ -32,9 +37,13 @@ if ( WhoDis.anyMobile() ) {
   document.addEventListener("touchstart", function(){}, true);
 }
 
+
 /**
- * Add Classes for IEs
+ * Add Classes for IEs or whatevers
  */
+
+const html = document.querySelector('html');
+
 if ( WhoDis.anyMS() ) {
   html.classList.add('is-ms');
 }
@@ -50,4 +59,10 @@ if ( WhoDis.IE10() ) {
 if ( WhoDis.Edge() ) {
   html.classList.add('is-edge');
 }
+
+if ( WhoDis.Safari() ) {
+  html.classList.add('is-safari');
+}
+
+...
 ```
