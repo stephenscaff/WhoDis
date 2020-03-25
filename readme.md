@@ -14,10 +14,10 @@ Watches for changes in `src`.
 
 
 ## Install (from npm)
-`npm i who-dis`
+`npm i whodis`
 
 ## Import (from npm install)
-`import WhoDis from 'who-dis'`
+`import WhoDis from 'whodis'`
 
 
 ## Or, import from your file/projects
