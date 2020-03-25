@@ -1,6 +1,6 @@
 {
   "name": "whodis",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A simple device and browser sniffer... mostly using navigator.userAgent (yikes)",
   "main": "dist/WhoDis.js",
   "umd:main": "dist/WhoDis.umd.js",
