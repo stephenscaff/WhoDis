@@ -1,62 +1,64 @@
 /**
  * WhoDis.js
- * A simple little sniffer. Mostly Using UA (Yikes! 😜)
+ * A simple little sniffer. Mostly Using UA sniffing (Yikes! 😜)
  * for conditional checks.
- * ES6 version
+ * es2015 version
  *
  * @return {boolean}
  * @author stephen scaff
  */
-const WhoDis = (() => {
+var WhoDis = (function() {
 
-  let ua = navigator.userAgent;
+  var ua = navigator.userAgent;
 
   return {
 
-    Android() {
-      return ua.match(/Android/i);
+    info:ua,
+    
+    Android: function() {
+      return ua.match(/Android/i)
     },
-    BlackBerry() {
-      return ua.match(/BlackBerry/i);
+    BlackBerry: function() {
+      return ua.match(/BlackBerry/i)
     },
-    Chrome() {
+    Chrome: function() {
       return ua.match(/Chrome/i)
     },
-    Edge() {
+    Edge: function() {
       return ua.match(/Edge/i)
     },
-    Firefox() {
+    Firefox: function() {
       return ua.match(/Firefox/i)
     },
-    IE() {
+    IE: function() {
       return ua.match(/Trident/i)
     },
-    IEMobile() {
-      return ua.match(/IEMobile/i);
+    IEMobile: function() {
+      return ua.match(/IEMobile/i)
     },
-    IE10() {
+    IE10: function() {
       return ua.match(/MSIE/i)
     },
-    iOS() {
-      return ua.match(/iPhone|iPad|iPod/i);
+    iOS: function() {
+      return ua.match(/iPhone|iPad|iPod/i)
     },
-    Opera() {
-      return ua.match(/Opera Mini/i);
+    Opera: function() {
+      return ua.match(/OPR/i)
     },
-    OperaMini() {
+    OperaMini: function() {
       return ua.match(/Opera Mini/i)
     },
-    Safari() {
+    Safari: function() {
       return !!ua.match(/Version\/[\d\.]+.*Safari/)
     },
-    Touch() {
+    Touch: function() {
       return ('ontouchstart' in window) || window.DocumentTouch && document instanceof DocumentTouch
     },
 
     /**
      * Any Microsoft
      */
-    anyMS() {
+    anyMS: function() {
       return (
         WhoDis.IE10() ||
         WhoDis.IE()   ||
@@ -67,7 +69,7 @@ const WhoDis = (() => {
     /**
      * Any Mobile
      */
-    anyMobile() {
+    anyMobile: function() {
       return (
         WhoDis.Android()    ||
         WhoDis.BlackBerry() ||
@@ -78,6 +80,3 @@ const WhoDis = (() => {
     }
   };
 })();
-
-// Export
-export default WhoDis;

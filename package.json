@@ -1,0 +1,39 @@
+{
+  "name": "whodis",
+  "version": "1.0.0",
+  "description": "A simple device and browser sniffer... mostly using navigator.userAgent (yikes)",
+  "main": "dist/WhoDis.js",
+  "umd:main": "dist/WhoDis.umd.js",
+  "module": "dist/WhoDis.module.js",
+  "source": "src/WhoDis.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "clean": "rm -rf dist",
+    "build": "microbundle",
+    "dev": "microbundle watch",
+    "prepublishOnly": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stephenscaff/WhoDis.git"
+  },
+  "keywords": [
+    "device sniffer",
+    "sniffer",
+    "checker",
+    "isMobile",
+    "ua",
+    "user agent"
+  ],
+  "author": "Stephen Scaff <stephenscaff.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stephenscaff/WhoDis/issues"
+  },
+  "homepage": "https://github.com/stephenscaff/WhoDis#readme",
+  "devDependencies": {
+    "microbundle": "^0.11.0"
+  }
+}

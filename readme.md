@@ -1,46 +1,34 @@
 # WhoDis.js
 
-Just a simple little userAgent sniffer to rock conditional checks.
-Mostly focuses on IE and Mobile currently, but can/will add more as needed.
+Just a simple little sniffer (that mostly uses `navigator.userAgent`) so you can rock conditional checks.
 
-Currently, you can check for
+## Build
+`npm run build`
 
-### Mobile
-- Android : `Android()`
-- BlackBerry : `BlackBerry()`
-- iOS : `iOS()`
-- Opera Mini : `OperaMini()`
-- IE Mobile : `IEMobile()`
-- Any Mobile (checks all the above) : `anyMobile()`
+Uses `microbundle` to build out in cjs, es, umd.
 
-### IEs
-- Edge : `Edge()`
-- IE : `IE()`
-- IE10 : `IE10()`
-- anyMS (IEs and Edge) : `anyMS()`
+## Dev
+`npm run dev`
 
-### Other Browsers
-- Chrome
-- Safari
-- Firefox
--
+Watches for changes in `src`.
+
+
+## Install (from npm)
+`npm i who-dis`
+
+## Import (from npm install)
+`import WhoDis from 'who-dis'`
+
+
+## Or, import from your file/projects
+`import WhoDis from ./WhoDis`
+
+Or, don't import and just use `src/WhoDis.es5.js`, which is just an ES5 IIFE.
+
 
 ## Usage
-
-Include in your project, and the rock you checks like :
-
 ```
-/**
- * Bind Touch Start On mobile.
- */
-if ( WhoDis.anyMobile() ) {
-  document.addEventListener("touchstart", function(){}, true);
-}
-
-
-/**
- * Add Classes for IEs or whatevers
- */
+import WhoDis from 'who-dis'
 
 const html = document.querySelector('html');
 
@@ -52,17 +40,30 @@ if ( WhoDis.IE() ) {
   html.classList.add('is-ie');
 }
 
-if ( WhoDis.IE10() ) {
-  html.classList.add('is-ie10');
-}
-
-if ( WhoDis.Edge() ) {
-  html.classList.add('is-edge');
-}
-
 if ( WhoDis.Safari() ) {
   html.classList.add('is-safari');
 }
-
-...
 ```
+
+## Current Checks
+
+### Mobile
+- Android : `WhoDis.Android()`
+- BlackBerry : `WhoDis.BlackBerry()`
+- iOS : `WhoDis.iOS()`
+- Opera Mini : `WhoDis.OperaMini()`
+- IE Mobile : `WhoDis.IEMobile()`
+- Any Mobile (checks all the above) : `WhoDis.anyMobile()`
+- Touch Screen : `WhoDis.Touch()`
+
+### IEs
+- Edge : `WhoDis.Edge()`
+- IE : `WhoDis.IE()`
+- IE10 : `WhoDis.IE10()`
+- anyMS (IEs and Edge) : `WhoDis.anyMS()`
+
+### Other Browsers
+- Chrome : `WhoDis.Chrome()`
+- Safari : `WhoDis.Safari()`
+- Firefox : `WhoDis.Firefox()`
+- Opera : `WhoDis.Opera()`
