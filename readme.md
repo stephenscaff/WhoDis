@@ -12,13 +12,11 @@ Uses `microbundle` to build out in cjs, es, umd.
 
 Watches for changes in `src`.
 
-
 ## Install (from npm)
 `npm i whodis`
 
 ## Import (from npm install)
 `import WhoDis from 'whodis'`
-
 
 ## Or, import from your file/projects
 `import WhoDis from ./WhoDis`
@@ -30,6 +28,7 @@ Or, don't import and just use `src/WhoDis.es5.js`, which is just an ES5 IIFE.
 ```
 import WhoDis from 'who-dis'
 
+// Add class to html
 const html = document.querySelector('html');
 
 if ( WhoDis.anyMS() ) {
@@ -43,6 +42,15 @@ if ( WhoDis.IE() ) {
 if ( WhoDis.Safari() ) {
   html.classList.add('is-safari');
 }
+
+// bail if mobile
+if (WhoDis.anyMobile) return;
+```
+
+## Log info on current `userAgent`
+
+```
+console.log(WhoDis.info)
 ```
 
 ## Current Checks
