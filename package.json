@@ -34,6 +34,6 @@
   },
   "homepage": "https://github.com/stephenscaff/WhoDis#readme",
   "devDependencies": {
-    "microbundle": "^0.11.0"
+    "microbundle": "^0.15.1"
   }
 }
